@@ -33,6 +33,8 @@ typedef struct {
 } GameInfo_t;
 
 void userInput(UserAction_t action, bool hold);
+//как запуск конечного автомата. Обрабатывает ввод и запускает действия 
+
 
 GameInfo_t updateCurrentState();
 ```
