@@ -1,5 +1,5 @@
 #include "input.h"
-
+// переписать реализацию
 UserAction_t getUserInput() {
 
     UserAction_t user_input;

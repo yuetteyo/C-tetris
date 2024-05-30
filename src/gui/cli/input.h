@@ -2,7 +2,7 @@
 #define INPUT_H
 
 #include <ncurses.h>
-#include "../../brick_game/tetris/tetris.h"
+#include "../../brick_game/tetris/game.h"
 
 UserAction_t getUserInput();
 

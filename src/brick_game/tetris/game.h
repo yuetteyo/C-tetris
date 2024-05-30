@@ -1,5 +1,5 @@
-#ifndef SRC_BRICK_GAME_TETRIS_TETRIS_H_
-#define SRC_BRICK_GAME_TETRIS_TETRIS_H_
+#ifndef __TETRIS_GAME_H__
+#define __TETRIS_GAME_H__
 
 #include <stdbool.h>
 
@@ -24,7 +24,6 @@ typedef struct {
     int pause;
 } GameInfo_t;
 
-UserAction_t getUserInput();
 void userInput(UserAction_t action, bool hold);
 //как запуск конечного автомата. Обрабатывает ввод и запускает действия 
 
