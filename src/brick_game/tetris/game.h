@@ -28,6 +28,13 @@ typedef struct {
   int pause;
 } GameInfo_t;
 
+// Структура с текущимипараметрами игры, включающая в себя другие структуры
+typedef struct {
+  GameInfo_t *data; //game_info
+  Figure_t *figure; //curr_figure
+  //дописать поля
+} GameParams_t;
+
 // allocate memory for matrix
 int **allocateMatrix(int rows, int cols);
 
