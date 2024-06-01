@@ -3,9 +3,11 @@
 
 #include <stdlib.h>
 
-#define FIGURE_SIZE 5
-// структура для фигуры
+#include "game.h"
 
+#define FIGURE_SIZE 5
+
+// структура для фигуры
 typedef struct {
     int **blocks;
     int x;
@@ -15,5 +17,4 @@ typedef struct {
 // enum для типов фигур ???
 
 // функции для фигуры
-Figure_t *allocFieldMatrix ();
 #endif

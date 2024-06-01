@@ -1,2 +1,2 @@
 all:
-	gcc launcher.c gui/cli/cli.c brick_game/tetris/tetris.c -lncurses
+	gcc main.c gui/cli/print.c gui/cli/engine.c brick_game/tetris/game.c -lncurses
