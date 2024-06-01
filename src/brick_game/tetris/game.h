@@ -32,6 +32,7 @@ typedef struct {
 typedef struct {
   GameInfo_t *data; //game_info
   Figure_t *figure; //curr_figure
+  FigureType_t *type;
   //дописать поля
 } GameParams_t;
 

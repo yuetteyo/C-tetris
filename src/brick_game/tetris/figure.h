@@ -17,15 +17,29 @@ typedef struct {
 } Figure_t;
 
 // enum для типов фигур
+// typedef enum {
+//     Flat,        // I  
+//     Angle_left,  // L
+//     Angle_right, // J
+//     Square,      // O
+//     Snake_left,  // Z
+//     Snake_right, // S
+//     Cross        // T
+// } FigureType_t;
+
 typedef enum {
-    Flat,        // I
-    Angle_left,  // L
-    Angle_right, // J
-    Square,      // O
-    Snake_left,  // Z
-    Snake_right, // S
-    Cross        // T
+    I,  
+    L,
+    J,
+    O, 
+    Z,
+    S,
+    T
 } FigureType_t;
 
 // функции для фигуры
+int **allocateFigureMatrix(int rows, int cols);
+int **createBlocks(FigureType_t type);
+// void clearBlocks(int **blocks);
+
 #endif
