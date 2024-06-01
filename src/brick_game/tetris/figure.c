@@ -1,2 +1,3 @@
 #include "figure.h"
 
+// добавить 

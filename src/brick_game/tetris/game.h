@@ -17,7 +17,7 @@ typedef enum {
   Action
 } UserAction_t;
 
-// структура с главной информацией по игре
+// структура с информацией по игре
 typedef struct {
   int **field;
   int **next;
@@ -27,6 +27,13 @@ typedef struct {
   int speed;
   int pause;
 } GameInfo_t;
+
+// Структура с текущимипараметрами игры, включающая в себя другие структуры
+typedef struct {
+  GameInfo_t *data; //game_info
+  Figure_t *figure; //curr_figure
+  //дописать поля
+} GameParams_t;
 
 // allocate memory for matrix
 int **allocateMatrix(int rows, int cols);
