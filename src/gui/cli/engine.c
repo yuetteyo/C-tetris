@@ -26,10 +26,24 @@ void gameLoop(void) {
     data.level = 0;
     data.speed = 0; 
     data.next = allocateMatrix(5, 5);
-    data.next[1][2] = 1;
-    data.next[1][3] = 1;
+    // Square
+    // data.next[1][2] = 1;
+    // data.next[1][3] = 1;
+    // data.next[2][2] = 1;
+    // data.next[2][3] = 1;
+
+    // Flat 
+    // data.next[2][1] = 1;
+    // data.next[2][2] = 1;
+    // data.next[2][3] = 1;
+    // data.next[2][4] = 1;
+
+    //Angle left
+    data.next[1][1] = 1;
+    data.next[2][1] = 1;
     data.next[2][2] = 1;
     data.next[2][3] = 1;
+
     printNext(data.next);
     printGameFront();
     printGameInfo(&data);

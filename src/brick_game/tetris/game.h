@@ -4,6 +4,8 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "figure.h"
+
 typedef enum {
   Start,
   Pause,

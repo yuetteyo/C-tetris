@@ -45,7 +45,9 @@ void printNext(int **next) {
             if(next[i][j]) {
                 attron(COLOR_PAIR(1));
                 mvaddch(i + 8, j + FIELD_SIZE_X * 2 + 10, ACS_CKBOARD); // TODO: improve
-                mvaddch(i + 8, j + FIELD_SIZE_X * 2 + 11, ACS_CKBOARD);
+                // mvaddch(i + 8, j + FIELD_SIZE_X * 2 + 11, ACS_CKBOARD);
+                // mvprintw(i + 8, j + FIELD_SIZE_X * 2 + 10, "%c", ' ');
+                // mvprintw(i + 8, j + FIELD_SIZE_X * 2 + 11, "%c", ' ');
                 attroff(COLOR_PAIR(1));
             }
         }
