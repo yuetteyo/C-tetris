@@ -16,7 +16,16 @@ typedef struct {
     int y;
 } Figure_t;
 
-// enum для типов фигур ???
+// enum для типов фигур
+typedef enum {
+    Flat,
+    Angle_left,
+    Angle_right,
+    Square,
+    Snake_left,
+    Snake_right,
+    Cross
+} FigureType_t;
 
 // функции для фигуры
 #endif
