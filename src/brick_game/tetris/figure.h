@@ -6,6 +6,8 @@
 #include "game.h"
 
 #define FIGURE_SIZE 5
+#define FIGURE_MATRIX_HEIGHT 5
+#define FIGURE_MATRIX_WIDTH 5
 
 // структура для фигуры
 typedef struct {
