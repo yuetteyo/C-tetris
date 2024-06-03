@@ -44,10 +44,10 @@ void printNext(int **next) {
         for(int j = 0; j < FIGURE_MATRIX_WIDTH; j++) {
             if(next[i][j]) {
                 attron(COLOR_PAIR(1));
-                mvaddch(i + 8, j + FIELD_SIZE_X * 2 + 10, ACS_CKBOARD); // TODO: improve
+                // mvaddch(i + 8, j + FIELD_SIZE_X * 2 + 10, ACS_CKBOARD); // TODO: improve
                 // mvaddch(i + 8, j + FIELD_SIZE_X * 2 + 11, ACS_CKBOARD);
-                // mvprintw(i + 8, j + FIELD_SIZE_X * 2 + 10, "%c", ' ');
-                // mvprintw(i + 8, j + FIELD_SIZE_X * 2 + 11, "%c", ' ');
+                mvprintw(i + 8, j * 2 + FIELD_SIZE_X * 2 + 8, "%c", ' ');
+                mvprintw(i + 8, j * 2 + FIELD_SIZE_X * 2 + 9, "%c", ' ');
                 attroff(COLOR_PAIR(1));
             }
         }
