@@ -39,7 +39,7 @@ typedef enum {
 
 // функции для фигуры
 int **allocateFigureMatrix(int rows, int cols);
-int **createBlocks(FigureType_t type);
-// void clearBlocks(int **blocks);
+int **createFigureMatrix(FigureType_t type);
+void clearFigureMatrix(int **matrix);
 
 #endif

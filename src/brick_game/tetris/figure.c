@@ -8,53 +8,58 @@ int **allocateFigureMatrix(int rows, int cols) {
   return matrix;
 }
 
-int **createBlocks(FigureType_t type) {
-    int **blocks = allocateFigureMatrix(FIGURE_MATRIX_HEIGHT, FIGURE_MATRIX_WIDTH);
+int **createFigureMatrix(FigureType_t type) {
+    int **figureMatrix = allocateFigureMatrix(FIGURE_MATRIX_HEIGHT, FIGURE_MATRIX_WIDTH);
     switch (type) {
         case I:
-            blocks[2][1] = 1;
-            blocks[2][2] = 1;
-            blocks[2][3] = 1;
-            blocks[2][4] = 1;
+            figureMatrix[2][1] = 1;
+            figureMatrix[2][2] = 1;
+            figureMatrix[2][3] = 1;
+            figureMatrix[2][4] = 1;
             break;
         case L:
-            blocks[1][1] = 1;
-            blocks[2][1] = 1;
-            blocks[2][2] = 1;
-            blocks[2][3] = 1;
+            figureMatrix[1][1] = 1;
+            figureMatrix[2][1] = 1;
+            figureMatrix[2][2] = 1;
+            figureMatrix[2][3] = 1;
         break;
         case J:
-            blocks[1][3] = 1;
-            blocks[2][1] = 1;
-            blocks[2][2] = 1;
-            blocks[2][3] = 1;
+            figureMatrix[1][3] = 1;
+            figureMatrix[2][1] = 1;
+            figureMatrix[2][2] = 1;
+            figureMatrix[2][3] = 1;
         break;
         case O:
-            blocks[1][2] = 1;
-            blocks[1][3] = 1;
-            blocks[2][2] = 1;
-            blocks[2][3] = 1;
+            figureMatrix[1][2] = 1;
+            figureMatrix[1][3] = 1;
+            figureMatrix[2][2] = 1;
+            figureMatrix[2][3] = 1;
         break;
         case Z:
-            blocks[1][1] = 1;
-            blocks[1][2] = 1;
-            blocks[2][2] = 1;
-            blocks[2][3] = 1;
+            figureMatrix[1][1] = 1;
+            figureMatrix[1][2] = 1;
+            figureMatrix[2][2] = 1;
+            figureMatrix[2][3] = 1;
         break;
         case S:
-            blocks[1][2] = 1;
-            blocks[1][3] = 1;
-            blocks[2][1] = 1;
-            blocks[2][2] = 1;
+            figureMatrix[1][2] = 1;
+            figureMatrix[1][3] = 1;
+            figureMatrix[2][1] = 1;
+            figureMatrix[2][2] = 1;
         break;
         case T:
-            blocks[1][2] = 1;
-            blocks[2][1] = 1;
-            blocks[2][2] = 1;
-            blocks[2][3] = 1;
+            figureMatrix[1][2] = 1;
+            figureMatrix[2][1] = 1;
+            figureMatrix[2][2] = 1;
+            figureMatrix[2][3] = 1;
         break;
     }
-    return blocks;
+    return figureMatrix;
 }
 
-// clearBlocks
+void clearFigureMatrix(int **matrix) {
+    for(int i = 0; i < FIGURE_MATRIX_HEIGHT; i++){
+        free(matrix[i]);
+    }
+    free(matrix);
+}
